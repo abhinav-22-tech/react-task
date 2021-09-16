@@ -1,0 +1,158 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  height: 70px;
+  width: 100%;
+  border-color: #fff;
+  border-bottom: 1px solid gray;
+}
+
+.left-side {
+  width: 20vw;
+}
+
+.middle-side {
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  padding-right: 700px;
+}
+
+.middle-side h1 {
+  font-size: 1em;
+  padding-right: 35px;
+}
+
+.middle-side h3 {
+  font-size: 0.7em;
+  color: grey;
+}
+
+.middle-side h3 span {
+  color: red;
+}
+.right-side {
+  width: 30vw;
+  padding-left: 120px;
+}
+
+.right-side button {
+  color: #fff;
+  background-color: #4d4c83;
+}
+
+.card-1 {
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.top {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding-left: 15px;
+}
+
+.top h1 {
+  font-size: 1em;
+}
+
+.top p {
+  font-size: 0.7em;
+}
+
+.bottom {
+  width: 100%;
+}
+
+label {
+  width: 100%;
+  font-size: 20px;
+}
+.title {
+  height: 30px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+}
+.description {
+  height: 100px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 5px;
+  border-radius: 10px;
+}
+
+label span {
+  color: red;
+}
+
+.attribute {
+  padding: 20px 3px 10px 22px;
+}
+
+.card-3 {
+  display: flex;
+  padding: 10px;
+}
+
+.card-3-1 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 15px;
+}
+
+.card-3-subcard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  border-radius: 10px;
+  justify-items: center;
+  padding-bottom: 50px;
+  cursor: pointer;
+}
+
+.card-3-subcard:hover {
+  background-color: rgb(177, 175, 175);
+}
+
+.card-3-subcard-Active {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  border-radius: 10px;
+  justify-items: center;
+  padding-bottom: 50px;
+  cursor: pointer;
+  background-color: #4d4c83;
+}
+
+.image-icons {
+  font-size: 70px;
+  padding-top: 30px;
+  color: #4d4c83;
+}
+
+.card-3-text {
+  padding-top: 5px;
+  color: #4d4c83;
+}
+
+.image-icons-Active {
+  font-size: 70px;
+  padding-top: 30px;
+  color: white;
+}
+
+.card-3-text-Active {
+  color: white;
+}
