@@ -2,9 +2,10 @@ import React, { useState } from "react";
 import Card from "../UI/Card";
 import "./RequirementForm.css";
 
-function RequirementForm({ add }) {
+function RequirementForm(props) {
   const [enteredTitle, setTitle] = useState("");
   const [enteredDescription, setDescription] = useState("");
+  const [requirementData, setRequirementData] = useState([]);
 
   const titleChangeHandler = (event) => {
     setTitle(event.target.value);
@@ -43,6 +44,15 @@ function RequirementForm({ add }) {
       setActive3("card-3-subcard-Active");
     }
   };
+
+  const addHandler = () => {
+    const tempRequirement = {
+      title: enteredTitle,
+      description: enteredDescription,
+    };
+    // setRequirementData(requirementData.push(tempRequirement));
+    props.add(tempRequirement);
+  };
   return (
     <>
       <div className="header">
@@ -58,7 +68,7 @@ function RequirementForm({ add }) {
           </span>
         </div>
         <div className="right-side">
-          <button className="btn btn-add " onClick={add}>
+          <button className="btn btn-add " onClick={addHandler}>
             ADD
           </button>
         </div>
