@@ -10,7 +10,12 @@ function App() {
     setappState("requirement");
   };
 
-  const getValues = () => {
+  const getValues = (requirementData) => {
+    const requirement = {
+      ...requirementData,
+      id: Math.random().toString(),
+    };
+    console.log(requirement);
     setappState("home");
   };
 
@@ -20,9 +25,7 @@ function App() {
         <Home
           data="Add Requirement"
           sendData={sendAppData}
-          title={""}
-          description={""}
-          attribute={""}
+          // require={requirementData}
         />
       )}
       {appState === "requirement" && <RequirementForm add={getValues} />}
@@ -31,3 +34,4 @@ function App() {
 }
 
 export default App;
+
