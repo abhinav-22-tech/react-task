@@ -5,7 +5,7 @@ import "./RequirementForm.css";
 function RequirementForm(props) {
   const [enteredTitle, setTitle] = useState("");
   const [enteredDescription, setDescription] = useState("");
-  const [requirementData, setRequirementData] = useState([]);
+  // const [requirementData, setRequirementData] = useState([]);
 
   const titleChangeHandler = (event) => {
     setTitle(event.target.value);
@@ -48,7 +48,7 @@ function RequirementForm(props) {
   const addHandler = () => {
     const tempRequirement = {
       title: enteredTitle,
-      description: enteredDescription,
+      description: enteredDescription
     };
     // setRequirementData(requirementData.push(tempRequirement));
     props.add(tempRequirement);
