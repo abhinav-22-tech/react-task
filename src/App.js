@@ -5,28 +5,21 @@ import RequirementForm from "./Components/pages/RequirementForm";
 
 function App() {
   const [appState, setappState] = useState("home");
+  const [object, setObject] = useState({});
 
   const sendAppData = () => {
     setappState("requirement");
   };
 
   const getValues = (requirementData) => {
-    const requirement = {
-      ...requirementData,
-      id: Math.random().toString(),
-    };
-    console.log(requirement);
+    setObject(requirementData);
     setappState("home");
   };
 
   return (
     <div className="App">
       {appState === "home" && (
-        <Home
-          data="Add Requirement"
-          sendData={sendAppData}
-          // require={requirementData}
-        />
+        <Home btn="Add Requirement" sendData={sendAppData} other={object} />
       )}
       {appState === "requirement" && <RequirementForm add={getValues} />}
     </div>
@@ -34,4 +27,3 @@ function App() {
 }
 
 export default App;
-
