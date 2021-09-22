@@ -1,16 +1,14 @@
 import "./Home.css";
 
-const Home = (props, data, sendData) => {
-  console.log(props);
+const Home = ({ btn, sendData, other }) => {
   return (
     <>
       <div className="card-2">
         <div className="head-1">
-          {/* <h1>{title}</h1>
-          <p>{description}</p>
-          <p>{attribute}</p>
-          <hr /> */}
-          <button onClick={sendData}>{data}</button>
+          <h1>{other.title}</h1>
+          <h1>{other.description}</h1>
+          <hr />
+          <button onClick={sendData}>{btn}</button>
         </div>
       </div>
     </>
